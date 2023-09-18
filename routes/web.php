@@ -20,3 +20,4 @@ Route::get('/', QrcodeController::class);
 
 Route::get('/guestbook', [GuestbookController::class, 'index']);
 Route::post('/guestbook/store', [GuestbookController::class, 'store']);
+Route::get('/guestbook/thankyou', [GuestbookController::class, 'thankyou']);

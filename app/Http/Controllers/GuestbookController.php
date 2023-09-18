@@ -36,4 +36,9 @@ class GuestbookController extends Controller
             "message"   => "Terimakasih Sudah Mengisi Buku Tamu"
         ], 201);
     }
+
+    public function thankyou()
+    {
+        return view('thankyou');
+    }
 }

@@ -13,7 +13,7 @@
 <body>
   <div id="app">
     <section class="section">
-      <div class="container" style="margin-top: 25px">
+      <div class="container" style="margin-top: 10px">
         <div class="page-error">
             <div class="page-inner">
             <img data-src="{{ asset('/img/qrcode.svg') }}" width="300" class="lazyload img-fluid" alt="Closing">
