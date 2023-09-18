@@ -58,7 +58,7 @@
         success(res) {
             swal({text: res.message, icon: 'success', timer: 3000,}).then(() => {
                 loadingsubmit(false);
-                window.location.href = '/thankyou';
+                window.location.href = '/guestbook/thankyou';
             });
         },
         error(res) {
