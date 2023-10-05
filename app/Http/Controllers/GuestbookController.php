@@ -31,10 +31,7 @@ class GuestbookController extends Controller
         }
 
         DB::commit();
-        return response()->json([
-            "success"   => true,
-            "message"   => "Terimakasih Sudah Mengisi Buku Tamu"
-        ], 201);
+        return $this->success($data);
     }
 
     public function thankyou()
