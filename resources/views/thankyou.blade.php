@@ -8,7 +8,7 @@
             <div class="mb-3">
                 <img src="{{ asset('img') }}/thk.png" alt="thankyou" width="100%">
             </div>
-            <h2 class="mb-2">Terimakasih</h2>
+            {{-- <h2 class="mb-2">Terimakasih</h2> --}}
             <p>
                 Terimakasih sudah mengisi buku tamu, dan terimakasih sudah mampir di anjungan Kabupaten Tulang Bawang
             </p>

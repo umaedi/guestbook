@@ -38,7 +38,7 @@
                   </div>
               </div>
               <div class="form-button-group  transparent">
-                  <button id="btn_login" type="submit" class="btn btn-primary btn-block btn-lg">Kirim</button>
+                  <button id="btn_login" type="submit" class="btn btn-primary btn-block btn-lg">ISI BUKU TAMU</button>
                   <button id="btn_loading" class="d-none btn btn-primary btn-block btn-lg" type="button">
                       <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Tunggu sebentar yah...
                   </button>
