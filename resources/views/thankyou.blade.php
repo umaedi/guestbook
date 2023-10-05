@@ -18,7 +18,7 @@
     <div class="fixed-bar">
         <div class="row">
             <div class="col-12">
-                <a href="/" class="btn btn-lg btn-outline-secondary btn-block">Kembali</a>
+                <a href="https://tulangbawangkab.go.id/" class="btn btn-lg btn-outline-secondary btn-block">Kembali</a>
             </div>
         </div>
     </div>
