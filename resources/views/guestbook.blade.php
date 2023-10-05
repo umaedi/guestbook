@@ -7,7 +7,7 @@
       <div class="section text-center">
          <img class="mb-2" src="{{ asset('img') }}/logo/logo-tuba.png" class="mt-2" alt="" width="80">
          <h3>BUKU TAMU</h3>
-          <h4>Selamat datang di Anjungan Kabupaten Tulang Bawang</h4>
+          <h4>Selamat datang di Anjungan Kabupaten <br> Tulang Bawang</h4>
       </div>
       <div class="section mb-5 p-2">
 
@@ -18,7 +18,7 @@
                       <div class="form-group boxed">
                           <div class="input-wrapper">
                               <label class="label" for="name">Nama Lengkap</label>
-                              <input type="text" class="form-control" id="name">
+                              <input type="text" class="form-control" id="name" required>
                               <i class="clear-input">
                                   <ion-icon name="close-circle"></ion-icon>
                               </i>
@@ -28,7 +28,7 @@
                       <div class="form-group boxed">
                           <div class="input-wrapper">
                               <label class="label" for="alamat">Alamat</label>
-                              <textarea type="text" class="form-control" id="alamat" autocomplete="off"
+                              <textarea type="text" class="form-control" id="alamat" required autocomplete="off"
                               ></textarea>
                               <i class="clear-input">
                                   <ion-icon name="close-circle"></ion-icon>
