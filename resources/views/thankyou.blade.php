@@ -10,7 +10,7 @@
             </div>
             <h2 class="mb-2">Terimakasih</h2>
             <p>
-                Terimakasih sudah mengisi buku absen, dan terimakasih sudah mampir di ajungan kami
+                Terimakasih sudah mengisi buku tamu, dan terimakasih sudah mampir di anjungan Kabupaten Tulang Bawang
             </p>
         </div>
     </div>
