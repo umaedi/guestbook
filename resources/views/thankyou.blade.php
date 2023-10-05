@@ -1,14 +1,28 @@
 @extends('layouts.app')
 @section('content')
-<div id="app">
-    <section class="section">
-      <div class="container" style="margin-top: 10px">
-        <div class="page-error">
-            <div class="page-inner">
-            <img data-src="{{ asset('/img/thnkyou.png') }}" width="300" class="lazyload img-fluid" alt="Closing">
-          </div>
+  <!-- App Capsule -->
+  <div id="appCapsule">
+
+    <div class="section">
+        <div class="splash-page mt-5 mb-5">
+            <div class="mb-3">
+                <img src="{{ asset('img') }}/thk.png" alt="thankyou" width="100%">
+            </div>
+            <h2 class="mb-2">Terimakasih</h2>
+            <p>
+                Terimakasih sudah mengisi buku absen, dan terimakasih sudah mampir di ajungan kami
+            </p>
         </div>
-      </div>
-    </section>
-  </div>
+    </div>
+
+    <div class="fixed-bar">
+        <div class="row">
+            <div class="col-12">
+                <a href="/" class="btn btn-lg btn-outline-secondary btn-block">Go Back</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- * App Capsule -->
 @endsection
