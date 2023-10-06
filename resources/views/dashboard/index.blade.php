@@ -25,8 +25,8 @@
                             <span class="title">Hallo</span>
                             <h1 class="total">Admin</h1>
                         </div>
-                        <div class="right">
-                            <h3 id="clock"></h3>
+                        <div class="right" id="date">
+                           
                         </div>
                     </div>
                 </div>
@@ -39,13 +39,13 @@
                     <div class="col-6">
                         <div class="stat-box">
                             <div class="title">Hari ini</div>
-                            <div class="value text-success">$ 552.95</div>
+                            <div class="value text-success">0</div>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="stat-box">
                             <div class="title">Kemarin</div>
-                            <div class="value text-danger">$ 86.45</div>
+                            <div class="value text-danger">0</div>
                         </div>
                     </div>
                 </div>
@@ -53,13 +53,13 @@
                     <div class="col-6">
                         <div class="stat-box">
                             <div class="title">Minggu Ini</div>
-                            <div class="value">$ 53.25</div>
+                            <div class="value">0</div>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="stat-box">
                             <div class="title">Minggu Lalu</div>
-                            <div class="value">$ 120.99</div>
+                            <div class="value">0</div>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
             <!-- Transactions -->
             <div class="section mt-4">
                 <div class="section-heading">
-                    <h2 class="title">Transactions</h2>
+                    <h2 class="title">Table Pengunjung</h2>
                     <a href="app-transactions.html" class="link">View All</a>
                 </div>
                 <div class="transactions">
@@ -132,12 +132,16 @@
 
 @endsection
 @push('js')
-    <script type="text/javascript">
+<script type="text/javascript">
         jQuery(function($) {
             setInterval(function() {
-                var date = new Date();
-                var time = date.toLocaleTimeString();
-                $('#clock').html(time);
+                var event = new Date();
+                var date = event.toLocaleDateString();
+                var time = event.toLocaleTimeString();
+                $('#date').html(`
+                <span class="title">${date}</span>
+                <h2>${time}</h2>
+                `);
             },1000);
         });
     </script>
