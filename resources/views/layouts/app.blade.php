@@ -40,9 +40,10 @@
     <!-- * App Header -->
 
     @yield('content')
-    {{-- <script src="{{ asset('js') }}/lib/bootstrap.bundle.min.js"></script> --}}
+    <script src="{{ asset('js') }}/lib/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('js') }}/base.js"></script>
     <script src="{{ asset('js') }}/jquery-3.3.1.min.js"></script>
+    {{-- <script type="module" src="../../unpkg.com/ionicons%405.4.0/dist/ionicons/ionicons.js"></script> --}}
     @stack('js')
   </body>
   </html>
