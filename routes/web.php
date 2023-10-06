@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', QrcodeController::class);
 Route::get('/login/{jwt}', function () {
     setcookie('jwt', request()->jwt, 60);
     return redirect('/admin/dashboard');
