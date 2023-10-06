@@ -16,7 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', QrcodeController::class);
+Route::get('/login/{jwt}', function () {
+    setcookie('jwt', request()->jwt, 60);
+    return redirect('/admin/dashboard');
+});
 
 Route::get('/guestbook', [GuestbookController::class, 'index']);
 Route::post('/guestbook/store', [GuestbookController::class, 'store']);

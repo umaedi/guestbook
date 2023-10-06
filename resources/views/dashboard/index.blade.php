@@ -9,7 +9,7 @@
         </a>
     </div>
     <div class="pageTitle">
-        <img src="{{ asset('img') }}/logo/logo-tuba.png" alt="logo" class="logo">
+        {{-- <h1>Tulang Bawang | Lampung Fair 2023</h1> --}}
     </div>
 </div>
 <!-- * App Header -->
