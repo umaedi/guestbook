@@ -68,7 +68,7 @@
     
             <!-- Transactions -->
             <div class="section mt-2">
-                <div class="section-title">Table Pengunjung</div>
+                <div class="section-title">Tabel Pengunjung</div>
                 <div class="card" id="dataTable">
                     <button id="btn_loading" class="btn btn-primary btn-block btn-lg" type="button">
                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Tunggu sebentar yah...
