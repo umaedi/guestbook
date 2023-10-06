@@ -9,7 +9,7 @@
         </a>
     </div>
     <div class="pageTitle">
-        <img src="{{ asset('img') }}/logo.png" alt="logo" class="logo">
+        <img src="{{ asset('img') }}/logo/logo-tuba.png" alt="logo" class="logo">
     </div>
 </div>
 <!-- * App Header -->
@@ -39,13 +39,13 @@
                     <div class="col-6">
                         <div class="stat-box">
                             <div class="title">Hari ini</div>
-                            <div class="value text-success">0</div>
+                            <div class="value text-success">{{ $hari_ini }}</div>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="stat-box">
                             <div class="title">Kemarin</div>
-                            <div class="value text-danger">0</div>
+                            <div class="value text-danger">{{ $hari_kemarin }}</div>
                         </div>
                     </div>
                 </div>
@@ -53,13 +53,13 @@
                     <div class="col-6">
                         <div class="stat-box">
                             <div class="title">Minggu Ini</div>
-                            <div class="value">0</div>
+                            <div class="value">{{ $minggu_ini }}</div>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="stat-box">
                             <div class="title">Minggu Lalu</div>
-                            <div class="value">0</div>
+                            <div class="value">{{ $minggu_kemarin }}</div>
                         </div>
                     </div>
                 </div>
@@ -67,82 +67,53 @@
             <!-- * Stats -->
     
             <!-- Transactions -->
-            <div class="section mt-4">
-                <div class="section-heading">
-                    <h2 class="title">Table Pengunjung</h2>
-                    <a href="app-transactions.html" class="link">View All</a>
-                </div>
-                <div class="transactions">
-                    <!-- item -->
-                    <a href="app-transaction-detail.html" class="item">
-                        <div class="detail">
-                            <img src="{{ asset('img') }}/sample/brand/1.jpg" alt="img" class="image-block imaged w48">
-                            <div>
-                                <strong>Amazon</strong>
-                                <p>Shopping</p>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="price text-danger"> - $ 150</div>
-                        </div>
-                    </a>
-                    <!-- * item -->
+            <div class="section mt-2">
+                <div class="section-title">Table Pengunjung</div>
+                <div class="card" id="dataTable">
+                    <button id="btn_loading" class="btn btn-primary btn-block btn-lg" type="button">
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Tunggu sebentar yah...
+                    </button>
                 </div>
             </div>
             <!-- * Transactions -->
    
         </div>
         <!-- * App Capsule -->
-    
-    
-        <!-- App Bottom Menu -->
-        <div class="appBottomMenu">
-            <a href="index-2.html" class="item active">
-                <div class="col">
-                    <ion-icon name="pie-chart-outline"></ion-icon>
-                    <strong>Overview</strong>
-                </div>
-            </a>
-            <a href="app-pages.html" class="item">
-                <div class="col">
-                    <ion-icon name="document-text-outline"></ion-icon>
-                    <strong>Pages</strong>
-                </div>
-            </a>
-            <a href="app-components.html" class="item">
-                <div class="col">
-                    <ion-icon name="apps-outline"></ion-icon>
-                    <strong>Components</strong>
-                </div>
-            </a>
-            <a href="app-cards.html" class="item">
-                <div class="col">
-                    <ion-icon name="card-outline"></ion-icon>
-                    <strong>My Cards</strong>
-                </div>
-            </a>
-            <a href="app-settings.html" class="item">
-                <div class="col">
-                    <ion-icon name="settings-outline"></ion-icon>
-                    <strong>Settings</strong>
-                </div>
-            </a>
-        </div>
-        <!-- * App Bottom Menu -->
-
 @endsection
 @push('js')
 <script type="text/javascript">
-        jQuery(function($) {
-            setInterval(function() {
-                var event = new Date();
-                var date = event.toLocaleDateString();
-                var time = event.toLocaleTimeString();
-                $('#date').html(`
-                <span class="title">${date}</span>
-                <h2>${time}</h2>
-                `);
-            },1000);
-        });
-    </script>
+$(document).ready(function() {
+    loadData();
+
+    jQuery(function($) {
+        setInterval(function() {
+            var event = new Date();
+            var date = event.toLocaleDateString();
+            var time = event.toLocaleTimeString();
+            $('#date').html(`
+            <span class="title">${date}</span>
+            <h2>${time}</h2>
+            `);
+        },1000);
+    });
+});
+
+function loadData()
+{
+    $.ajax({
+        'url': '{{ url()->current() }}',
+        'type': 'GET',
+        'data': {
+            'load': 'table',
+        },
+        success(res) {
+            $('#dataTable').html(res);
+        },
+        error(res) {
+            console.log(res)
+        }
+    })
+}
+        
+</script>
 @endpush

@@ -18,7 +18,7 @@
                       <div class="form-group boxed">
                           <div class="input-wrapper">
                               <label class="label" for="name">Nama Lengkap</label>
-                              <input type="text" class="form-control" id="name" required>
+                              <input type="text" name="nama" class="form-control" id="name" required>
                               <i class="clear-input">
                                   <ion-icon name="close-circle"></ion-icon>
                               </i>
@@ -28,7 +28,7 @@
                       <div class="form-group boxed">
                           <div class="input-wrapper">
                               <label class="label" for="alamat">Alamat</label>
-                              <textarea type="text" class="form-control" id="alamat" required autocomplete="off"
+                              <textarea type="text" name="alamat" class="form-control" id="alamat" required autocomplete="off"
                               ></textarea>
                               <i class="clear-input">
                                   <ion-icon name="close-circle"></ion-icon>
